@@ -16,7 +16,7 @@ RUN wget https://beta.apt.unified-streaming.com/unifiedstreaming.pub && \
     sh -c 'echo "deb [arch=arm64] https://beta.apt.unified-streaming.com focal-ports multiverse" > /etc/apt/sources.list.d/unified-streaming-arm64.list' 
 
 # Install mp4split
-UN apt-get update \
+RUN apt-get update \
 && apt-get -y install \
     "mp4split=${VERSION}" \
 &&  apt-get clean
