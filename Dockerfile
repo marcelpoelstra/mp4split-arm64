@@ -19,6 +19,7 @@ RUN wget https://beta.apt.unified-streaming.com/unifiedstreaming.pub && \
 RUN apt-get update \
 && apt-get -y install \
     "mp4split=${VERSION}" \
+&&  apt-get -y autoremove \
 &&  apt-get clean
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
